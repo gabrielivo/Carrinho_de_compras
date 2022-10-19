@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header> <h1>Minha Loja</h1> </header>
+    <main>
+
+        <h2>Produtos</h2>
+        <p> Lista de produtos da loja</p>
+        <br>
+
+        <div id="pp">
+            <p>Produto</p>
+            <input  placeholder="Nome do produto" type="text" name="nprod" id="nprod">
+            <br><br>
+            <p>Preço</p>
+            <input placeholder="Valor do produto" type="number" name="vprod" id="vprod">
+            <br><br>
+            <button  onclick="produtos.salvar()"  id="b1" class="botao">Salvar</button>
+            <input onclick="produtos.cancelar()" class="botao" type="button" value="Cancelar">
+        </div>
+
+        <div id="tab">
+            <table border="1" >
+                <thead>
+                    <th>ID</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Opções</th>
+                </thead>
+                <tbody id="tbody">
+                    <tr> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
