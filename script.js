@@ -14,7 +14,6 @@ class Produtos{
            } else {
                 this.atualizar(this.editId, produtos);
             }
-            
            
         }
         this.lista()
@@ -24,7 +23,9 @@ class Produtos{
     lista(){
         let tbody = document.querySelector('#tbody');
         tbody.innerHTML = ''
-
+        var valortotal = 0
+        var vtotal = document.querySelector('#vtotal')
+        
         for(let a = 0; a < this.arrayp.length; a++){
             let tr = tbody.insertRow();
 
@@ -50,8 +51,13 @@ class Produtos{
 
             td_opcoes.appendChild(imgDel)
             td_opcoes.appendChild(imgEdit)
+
+            valortotal += this.arrayp[a].valor
+            console.log(vtotal)
+            
         }
 
+        vtotal.innerHTML = valortotal.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
  
     }
 
@@ -96,13 +102,20 @@ class Produtos{
     deletar(id){
         if(confirm('Deseja excluir o produto?') == true){
             let tbody = document.querySelector('#tbody')
-
+       
         for(let a = 0; a < this.arrayp.length; a++ ){
             if(this.arrayp[a].id == id){
                 this.arrayp.splice(a, 1)
                 tbody.deleteRow(a)
             }
         }
+
+        var valortotal = 0
+        var vtotal = document.querySelector('#vtotal')
+        for(let a =0; a < this.arrayp.length; a++){
+            valortotal += this.arrayp[a].valor
+        }
+        vtotal.innerHTML = valortotal.toLocaleString('pt-BR',{style: 'currency', currency:'BRL'})
         }
     }
 
@@ -118,8 +131,11 @@ class Produtos{
             if(this.arrayp[a].id == id){
                 this.arrayp[a].nome = produtos.nome;
                 this.arrayp[a].valor = produtos.valor;
+                this.arrayp[a].valor = parseFloat(this.arrayp[a].valor)
             }
+            
         }
+
     }
 
     

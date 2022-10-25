@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0%;
@@ -6,11 +7,14 @@
 
 header{
     text-align: center;
-    background-color: rgb(117, 38, 190);
+    background-color: #a59750;
     color: aliceblue;
     padding: 10px;
 }
 
+h1,h2{
+    font-family: 'Alfa Slab One', cursive; 
+}
 main{
     padding: 20px;
 }
@@ -27,7 +31,7 @@ main{
 
 .botao{
     padding: 10px;
-    background-color: rgb(117, 38, 190);
+    background-color: #a59750;
     color: aliceblue;
     border: 0px;
     border-radius: 5px;
@@ -36,7 +40,7 @@ main{
 }
 
 .botao:hover{
-    background-color:rgba(117, 38, 190, 0.87) ;
+    background-color:#ccc085 ;
     transition: all ease 0.6s;
 }
 
@@ -67,4 +71,13 @@ table td img{
 table td{
     text-align: center;
     padding: 3px;
+}
+#total{
+    text-align: right;
+    padding: 10px;
+}
+
+#total p {
+    display: inline;
+    font-family: 'Alfa Slab One', cursive; 
 }
