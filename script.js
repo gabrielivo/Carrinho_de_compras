@@ -14,6 +14,7 @@ class Produtos{
            } else {
                 this.atualizar(this.editId, produtos);
             }
+            console.log(this.arrayp)
            
         }
         this.lista()
